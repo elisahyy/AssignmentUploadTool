@@ -7,7 +7,42 @@
     <link rel="stylesheet" href="style.css"
 </head>
 <body>
-    
+    <div id="header">
+        <h1> Assignment Upload Tool</h1>
+    </div>
+
+    <div id="login">
+        <div id="title">
+            <h3>Anmelden</h3>
+        </div>
+
+        <form id="loginForm">
+        <div class="input">
+        <input type="text" id="username" placeholder="Benutzername eingeben" required>
+        </div>
+
+        <div class="input">
+        <input type="password" id="password" placeholder="Passwort eingeben" required>
+        </div>
+
+        <div id="typ">
+        <div id="s">
+        <input type="radio" id="student" name="role" value="student" required>
+        <label for="student">Student</label>
+        </div>
+
+        <div id="t">
+        <input type="radio" id="tutor" name="role" value="tutor">
+        <label for="tutor">Tutor</label>
+        </div>
+
+        </div>
+
+        <button type="submit" id="loginBtn">Login</button>
+        </form>
+    </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
