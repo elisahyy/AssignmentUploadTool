@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 <input type="file" id="file-upload" name="file" required>
                 <button type="submit">Hochladen</button>
             </form>
+            <div id="BtnContainer">
+                <button id="paBtn" onclick = "window.location.href='previous_assignments.html'">Previous Assignments</button> 
+            </div>
         `;
     }
 });
