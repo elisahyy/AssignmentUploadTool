@@ -38,8 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button type="submit">Hochladen</button>
             </form>
             <div id="BtnContainer">
-                <button id="paBtn" onclick = "window.location.href='previous_assignments.html'">Previous Assignments</button> 
+                <button id="paBtn" onclick="saveCourseAndNavigate('${courseName}')">Previous Assignments</button>
             </div>
         `;
     }
 });
+
+function saveCourseAndNavigate(courseName) {
+    localStorage.setItem("selectedCourse", courseName);
+    window.location.href = 'previous_assignments.html';
+}
+

@@ -7,7 +7,70 @@
     <link rel="stylesheet" href="style.css"
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <div id="header">
+        <h1>Previous Assignments</h1>
+    </div>
+
+    <div id="container">
+
+    <div id="main-content">
+        <h2 id="course-title">Vergangene Abgaben für den Kurs: <span id="course-name"></span></h2>
+        <p>Hier sehen Sie alle hochgeladenen Aufgaben für diesen Kurs.</p>
+    </div>
+
+    <div id="avatarContainer">
+    <div id="avatar"></div>
+    <div id="speechBubble" class="hidden">
+        <span id="closeButton">x</span>
+        Du hast in diesem Kurs schon 53/100 Punkten erreicht!</div>
+    </div>
+
+    </div>
+
+    <div id="tableContainer">
+    <table>
+        <thead>
+            <tr>
+                <th>Nr.</th>
+                <th>Dateiname</th>
+                <th>Erreichte Punktzahl</th>
+                <th>Korrektur</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Abgabe_1.pdf</td>
+                <td>8</td>
+                <td><button>Download</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Abgabe_2.zip</td>
+                <td>12</td>
+                <td><button>Download</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Abgabe_3.zip</td>
+                <td>10</td>
+                <td><button>Download</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Abgabe_4.pdf</td>
+                <td>9</td>
+                <td><button>Download</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Abgabe_5.zip</td>
+                <td>14</td>
+                <td><button>Download</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <script src="previous_assignments.js"></script>
 </body>
 </html>
