@@ -87,23 +87,32 @@ document.addEventListener("DOMContentLoaded", function () {
         return `
             <h2>${courseName} -  ${studentId}</h2>
             <p>Hier können Sie die Aufgaben von <strong>${studentId}</strong> für den Kurs <strong>${courseName}</strong> einsehen und bewerten.</p>
+            <form class="download-form">
+                <label for="file-upload">Abgabe herunterladen:</label>
+                <button type="submit">Download</button>
+            </form>
+            <br>
             <form class="upload-form">
                 <label for="file-upload">Korrektur hochladen:</label>
                 <input type="file" id="file-upload" name="file" required>
                 <button type="submit">Hochladen</button>
             </form>
+            <br>
+            <form class="points-form">
+                <label for="points-input">Erreichte Punkte:</label>
+                <input type="number" id="points-input" name="points" min="0" step="1" placeholder="Punkte">
+                <button type="button" id="save-points-btn">Eintragen</button>
+            </form>
         `;
     }
+    
+    // Verhindert Neuladen der Seite wenn man auf Download drückt
+    document.addEventListener("submit", function (event) {
+        const form = event.target;
+    
+        if (form.classList.contains("download-form")) {
+            event.preventDefault(); 
+        }
+    });  
 
-    // function generateCourseContent(courseName) {
-    //     return `
-    //         <h2>${courseName}</h2>
-    //         <p>Hier können Sie Hausaufgaben für den Kurs <strong>${courseName}</strong> hochladen.</p>
-    //         <form class="upload-form">
-    //             <label for="file-upload">Hausaufgabe hochladen:</label>
-    //             <input type="file" id="file-upload" name="file" required>
-    //             <button type="submit">Hochladen</button>
-    //         </form>
-    //     `;
-    // }
 });
